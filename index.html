@@ -6,97 +6,108 @@
     <title>Comprendre le HTML sémantique</title>
 </head>
 <body>
+    <!--  L'en-tête contient le titre principal et un paragraphe d'introduction. -->
     <header>
         <h1>Comprendre le HTML sémantique</h1>
+        <p>Pourquoi bien choisir ses balises change tout</p>
     </header>
-    <main>
-        <section>
-            <h2>Pourquoi bien choisir ses balises change tout</h2>
-            <ul>
-                <li>Qu'est-ce que le HTML ?</li>
-                <li>La sémantique</li>
-                <li>Les balises courantes</li>
-                <li>Ressources</li>
-            </ul>
-            
-                <section>
-                    <h3>Qu'est-ce que le HTML ?</h3>
-                    <p>Le HTML (HyperText Markup Language) est le langage qui sert à structurer le contenu
+<!-- Cette zone contient les liens de navigation.
+     J'utilise nav, puis ul et li pour organiser les liens sous forme de liste. -->
+    <nav>
+        <ul>
+            <!-- href="#html" est la destination de mon lien
+             et id="html" est le repère qui indique où aller-->
+            <li><a href="#html">Qu'est-ce que le HTML ?</a></li>
+            <li><a href="#semantique">La sémantique</a></li>
+            <li><a href="#balises">Les balises courantes</a></li>
+            <li><a href="#ressources">Ressources</a></li>
+        </ul>
+    </nav>
+<!--  Le contenu principal de la page commence ici. -->
+     <main>     
+        <section id="html">
+        <!-- je mets l'attribut id de la section correspondante -->
+            <h2>Qu'est-ce que le HTML ?</h2>
+            <p>Le HTML (HyperText Markup Language) est le langage qui sert à structurer le contenu
                 d'une page web : les titres, les paragraphes, les images, les liens. C'est le squelette
                 de toute page que vous visitez sur internet.</p>
-                </section>
+        </section>
 
-                <section>
-                    <h3>Pourquoi la sémantique ?</h3>
-                    <p>On pourrait tout écrire avec une seule balise passe-partout, et le résultat visuel
+        <section id="semantique">
+            <h2>Pourquoi la sémantique ?</h2>
+            <p>On pourrait tout écrire avec une seule balise passe-partout, et le résultat visuel
                 serait identique à l'écran. Mais une page construite ainsi est illisible pour les
                 technologies qui ne voient pas la page, comme les lecteurs d'écran utilisés par les
                 personnes malvoyantes, ou les robots des moteurs de recherche. La sémantique, c'est
                 choisir une balise qui décrit vraiment le rôle du contenu qu'elle contient.</p>
-                </section>
-
-                <section>
-                    <h3>Les balises sémantiques courantes</h3>
-                    <ol>
-                        <li>
-                            <h4>L'en-tête de page</h4>
-                            <p>Contient le titre du site et les informations d'introduction, généralement en
-                    haut de la page. C'est la toute première chose que l'on voit.</p>
-                        </li>
-                        <li>
-                            <h4>La navigation</h4>
-                            <p>Regroupe les liens qui permettent de se déplacer dans le site. On y trouve
-                    souvent une liste de liens vers les grandes pages ou sections.</p>
-                        </li>
-                        <li>
-                            <h4>Le contenu principal</h4>
-                            <p> Il n'y en a qu'un seul par page : c'est le bloc qui contient le cœur du sujet,
-                    tout ce qui n'est ni l'en-tête, ni la navigation, ni le pied de page.</p>
-                        </li>
-                        <li>
-                            <h4>Une section et un article</h4>
-                            <p>Une section regroupe un ensemble de contenus liés par un même thème. Un article,
-                    lui, est un contenu autonome, qui aurait du sens même republié seul ailleurs —
-                    comme un billet de blog ou une fiche produit.</p>
-                        </li>
-                        <li>
-                            <h4>Le pied de page</h4>
-                            <p>Contient les informations de fin de page : droits d'auteur, contact, liens
-                    secondaires. Généralement tout en bas.</p>
-                        </li>         
-                    </ol>
-                </section>  
         </section>
 
+        <section id="balises">
+            <h2>Les balises sémantiques courantes</h2>
+                <ul>
+                <!-- ici je mets <ul> car il s'agit d'une liste de sujets, et non pas des étapes numérotées
+                    <ul> : est une liste dont l'ordre n'a pas d'importance
+                    <ol> : est une liste dont l'ordre est importante comme des étapes à suivre
+                    <li> : chaque élément de la liste -->
+                    <li>
+                        <h3>L'en-tête de page</h3>
+                        <p>Contient le titre du site et les informations d'introduction, généralement en
+                    haut de la page. C'est la toute première chose que l'on voit.</p>
+                    </li>
+                    <li>
+                        <h3>La navigation</h3>
+                        <p>Regroupe les liens qui permettent de se déplacer dans le site. On y trouve
+                    souvent une liste de liens vers les grandes pages ou sections.</p>
+                    </li>
+                    <li>
+                        <h3>Le contenu principal</h3>
+                        <p> Il n'y en a qu'un seul par page : c'est le bloc qui contient le cœur du sujet,
+                    tout ce qui n'est ni l'en-tête, ni la navigation, ni le pied de page.</p>
+                    </li>
+                    <li>
+                        <h3>Une section et un article</h3>
+                        <p>Une section regroupe un ensemble de contenus liés par un même thème. Un article,
+                    lui, est un contenu autonome, qui aurait du sens même republié seul ailleurs —
+                    comme un billet de blog ou une fiche produit.</p>
+                    </li>
+                    <li>
+                        <h3>Le pied de page</h3>
+                        <p>Contient les informations de fin de page : droits d'auteur, contact, liens
+                    secondaires. Généralement tout en bas.</p>
+                    </li>         
+                </ul>
+        </section>  
+        
         <section>
             <h2>Les 3 étapes pour rendre une page plus sémantique</h2> 
-            <ul>
+            <ol>
+            <!-- ici <ol> car les 3 étapes décrivent une progression -->
                 <li>Lire le contenu de chaque bloc et se demander à quoi il sert vraiment</li>
                 <li>Choisir la balise qui décrit le mieux ce rôle</li>
                 <li>Vérifier que le rendu visuel n'a pas changé</li>
-            </ul>
+            </ol>
         </section>
         <section>
             <h2>Le saviez-vous ?</h2>
             <p> Les lecteurs d'écran permettent aux personnes malvoyantes de naviguer directement
                 d'une balise de navigation à une autre, ou de sauter tout un en-tête pour aller droit
                 au contenu principal. Sans sémantique, cette navigation rapide est impossible.</p>
-                <h3>Exemple de structure sémantique :</h3>  
-                    <ul>
-                        <li>un en-tête,</li>
-                        <li>une navigation,</li>
-                        <li>un contenu principal découpé en sections,</li>
-                        <li>et un pied de page.</li>
-                    </ul>  
-        </section> 
+        </section>
+        <section id="ressources">
+        </section>
+            
+        <p>Exemple de structure sémantique : un en-tête,une navigation, un contenu principal découpé en sections, et un pied de page.</p>
     </main>
 
     <footer>
+    <!-- ici c'est le pied de page -->
+        <!-- ici le copyrigt est simplement une information textuelle -->
         <p>© 2026 — Ressource pédagogique Simplon</p>
             <address>
-                Cité Numérique, 2 rue Marc Sangnier, 33130 Bègles<br>
-                 <a href="mailto:contact@exemple.com">contact@exemple.com</a>
-               
+                <!--on utilise <address> car le contenu correspond aux coordonnées de contact; 
+                    je mets <br> pour un retour automatique à la ligne  -->
+               Cité Numérique, 2 rue Marc Sangnier, 33130 Bègles<br>
+               contact@exemple.com
             </address>
     </footer>   
 </body>
